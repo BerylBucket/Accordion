@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: Kumbh Sans, sans-serif;
+}
+:root {
+  --darkBlu: hsl(238, 29%, 16%);
+  --red: hsl(14, 88%, 65%);
+  --violet: hsl(273, 75%, 66%);
+  --blue: hsl(240, 73%, 65%);
+  --liteGrayBlue: hsl(240, 5%, 91%);
+  --darkGrayBlu: hsl(240, 6%, 50%);
+  --darkerGrayBlu: hsl(237, 12%, 33%);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+   background: -webkit-gradient(linear,left top, left bottom,from(var(--violet)),to(var(--blue)));
+   background: linear-gradient(var(--violet),var(--blue));
+  /*background: url("https://i.ibb.co/0DhDf0M/desktop-design.jpg");*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 1.5rem;
+}
+h1 {
+  font-weight: 700;
+  font-size: 32px;
+}
+@media (max-width: 800px) {
+  h1 {
+    text-align: center;
+    margin-top: 2.7rem;
+    margin-bottom: 1rem;
+  }
+  .card{
+padding: 1.6rem 1.6rem 3rem 1.6rem;
+  margin-top: 7.7rem;
+}
+.illu{
+  position: relative;
+  background: url("https://raw.githubusercontent.com/BerylBucket/Accordion/main/assets/illuMob.svg");
+  background-position: 100% 0;
+  width: 238px;
+  height: 182px;
+  display: block;
+  margin: auto;
+  margin-top: -8.2rem;
+}
+.illu:before{
+  content: " ";
+  background: url("https://raw.githubusercontent.com/BerylBucket/Accordion/main/assets/illuPatternMob.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  height: 104px;
+}
+}
+details {
+  border-bottom: var(--liteGrayBlue) solid 1px;
+  font-size: 13px;
+}
+details[open] {
+  padding: 1.1rem 0;
+}
+details[open] summary {
+  font-weight: 700;
+  padding: 0.1rem 0 0.5rem 0;
+}
+details[open] summary:after{
+  content: " ";
+  position: absolute;
+  top: calc(50% - 3px);
+  right: -4px;
+  width: 10px;
+  height: 7px;
+  -webkit-transform: rotateZ(180deg) translateY(3.5px);
+          transform: rotateZ(180deg) translateY(3.5px);
+  background: url("https://raw.githubusercontent.com/BerylBucket/Accordion/main/assets/arrow.svg");
+}
+details[open] p {
+  width: 95%;
+}
+details > summary {
+  list-style: none;
+  padding: 1.1rem 0;
+  position: relative;
+}
+summary:after {
+  content: " ";
+  position: absolute;
+  top: calc(50% - 3px);
+  right: -4px;
+  width: 10px;
+  height: 7px;
+  background: url("https://raw.githubusercontent.com/BerylBucket/Accordion/main/assets/arrow.svg");
+}
+summary:hover{
+  cursor: pointer;
+  color: var(--red);
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+p {
+  line-height: 20px;
+  font-size: 12px;
+}
+.card {
+  border-radius: 24px;
+  background: #fff;
+}
+
+.card img {
+  margin-top: -8.2rem;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+@media(min-width: 800px) and (max-width: 1400px){
+  body{
+padding: 5rem;
+}
+  .card{
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem;
+  }
+  .illu{
+    position: relative;
+    background: url("https://raw.githubusercontent.com/BerylBucket/Accordion/main/assets/illuDesk.svg");
+    background-size: auto;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 1400px) {
+  h1{
+    margin-bottom: 1.1rem;
+  }
+  body {
+    padding: 8rem 0;
+  }
+  .card {
+    width: 922px;
+    height: 510px;
+    margin: auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+    padding: 4.5rem 6.8rem 4.5rem 0;
+    box-shadow: 0 8px 85px 0px #0007;
+  }
+  summary{
+    font-size: 14px;
+  }
+  .illu{
+    position: relative;
+    background: url("https://raw.githubusercontent.com/BerylBucket/Accordion/main/assets/illuDesk.svg");
+    background-size: 472px 359px;
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+  }
+  .illu:before{
+    content: " ";
+    background: url("https://raw.githubusercontent.com/BerylBucket/Accordion/main/assets/illuPatternDesk.svg");
+    background-position: 100% 68%;
+    background-size: 270% auto;
+    width: 100%;
+    height: 510px;
+    position: absolute;
+    top: -4.5rem;
+    left:0;
+    z-index: 9;
+  }
+  .illu:after{
+    content: " ";
+    width: 191px;
+    height: 184px;
+    background: url("https://raw.githubusercontent.com/BerylBucket/Accordion/main/assets/box.svg");
+    position: absolute;
+    top: 133px;
+    left: -94px;
+  }
+  .acc {
+   padding-left: 3.4rem;
+  }
+}
